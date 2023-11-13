@@ -50,37 +50,55 @@ class _HomePageState extends State<HomePage> {
 
     //belum bisa menampilkan icon svg
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.menu_book,color: Colors.white,),
+      image: Icon(
+        Icons.menu_book,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 10, 40, 43),
       title: "Pinjam Buku",
       navigator: "/borrowpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.book,color: Colors.white,),
+      image: Icon(
+        Icons.book,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 32, 32, 49),
       title: "Pinjaman Aktif",
       navigator: "/activeborrow",
     ));
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.collections_bookmark_rounded,color: Colors.white,),
+      image: Icon(
+        Icons.collections_bookmark_rounded,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 34, 23, 80),
       title: "Riwayat Pinjam",
       navigator: "/historyborrow",
     ));
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.meeting_room,color: Colors.white,),
+      image: Icon(
+        Icons.meeting_room,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 21, 80, 60),
       title: "Pinjam Ruang",
       navigator: "/ruanganpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.book_online_rounded,color: Colors.white,),
+      image: Icon(
+        Icons.book_online_rounded,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 32, 32, 49),
       title: "eBook",
       navigator: "/ebookpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.live_help_rounded,color: Colors.white,),
+      image: Icon(
+        Icons.live_help_rounded,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 10, 40, 43),
       title: "Bantuan",
       navigator: "/bantuanpage",
@@ -188,7 +206,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Text(
-                          'Shandika David',
+                          'Guido Augusta',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 14,
@@ -235,14 +253,15 @@ class _HomePageState extends State<HomePage> {
                 items: imageSliders,
                 carouselController: _controller,
                 options: CarouselOptions(
-                    height: 115,
-                    autoPlay: true,
-                    autoPlayInterval: Duration(seconds: 5),
-                    viewportFraction: 0.85,
-                    enlargeCenterPage: false,
-                    aspectRatio: 15 / 5,
-                    enableInfiniteScroll: true,
-                    padEnds: false),
+                  height: 115,
+                  autoPlay: true,
+                  autoPlayInterval: Duration(seconds: 5),
+                  viewportFraction: 0.85,
+                  enlargeCenterPage: false,
+                  aspectRatio: 15 / 5,
+                  enableInfiniteScroll: true,
+                  padEnds: false,
+                ),
               ),
             ),
             const Padding(
@@ -274,9 +293,10 @@ class _HomePageState extends State<HomePage> {
                             MaterialStateProperty.all(Colors.transparent)),
                     onPressed: () {
                       Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const SearchBook()),
-                  );
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SearchBook()),
+                      );
                     },
                     child: Text(
                       'Lihat Semua',
