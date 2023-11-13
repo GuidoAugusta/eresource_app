@@ -36,7 +36,7 @@ class ProfilePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Shandika David Ardiansyah',
+                      'Muhammad Guido Augusta',
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
@@ -47,7 +47,7 @@ class ProfilePage extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Text('22.11.4560')
+                    Text('22.11.4562')
                   ],
                 ),
               )
@@ -70,7 +70,7 @@ class ProfilePage extends StatelessWidget {
                   size: 30,
                   color: Colors.black,
                 ),
-                labelText: "shandikadavid.ardiansyah@students.amikom.ac.id",
+                labelText: "muhammadguido29@gmail.com",
                 labelStyle: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w300,
@@ -94,7 +94,7 @@ class ProfilePage extends StatelessWidget {
                   size: 30,
                   color: Colors.black,
                 ),
-                labelText: "***************",
+                labelText: "************",
                 labelStyle: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w300,
