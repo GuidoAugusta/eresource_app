@@ -84,51 +84,13 @@ class BorrowBook extends StatelessWidget {
                                     fontFamily: 'Inter',
                                     fontWeight: FontWeight.w500),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 25),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      "Tipe Buku : ",
-                                      maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 14,
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                    Text(
-                                      buku.tipe,
-                                      maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 14,
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                  ],
-                                ),
-                              ),
                               SizedBox(
-                                height: 5,
+                                height: 25,
                               ),
                               Row(
                                 children: [
                                   Text(
-                                    "Kategori : ",
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                  Text(
-                                    buku.kategori,
+                                    "Tipe Buku : ${buku.tipe}",
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
@@ -144,7 +106,21 @@ class BorrowBook extends StatelessWidget {
                                 height: 5,
                               ),
                               Text(
-                                "Bahasa : Inggris",
+                                "Kategori : ${buku.kategori}",
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "Bahasa : ${buku.bahasa}",
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(

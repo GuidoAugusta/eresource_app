@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
               items: imageSliders,
               carouselController: _controller,
               options: CarouselOptions(
-                height: 120,
+                height: 130,
                 autoPlay: true,
                 autoPlayInterval: Duration(seconds: 5),
                 viewportFraction: 0.8,

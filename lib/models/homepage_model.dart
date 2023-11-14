@@ -25,6 +25,7 @@ class MenuBuku {
   String jmlHalaman;
   double rating;
   String sinopsis;
+  String bahasa;
 
   MenuBuku({
     required this.image,
@@ -38,6 +39,7 @@ class MenuBuku {
     required this.jmlHalaman,
     required this.rating,
     required this.sinopsis,
+    required this.bahasa,
   });
 }
 
@@ -115,6 +117,7 @@ var bukuList = [
     rating: 4.4,
     sinopsis:
         "Sinopsis1.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus hendrerit purus. Aenean non dui ut mauris mollis maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed auctor lectus a vehicula malesuada. Vestibulum aliquam tincidunt urna eget efficitur. Cras a volutpat diam. Fusce pellentesque turpis odio, vel rhoncus sem blandit nec. Cras condimentum molestie eros, non gravida nulla facilisis et. Mauris vitae ante bibendum, gravida purus quis, cursus augue. Donec quis rutrum nisi, eget accumsan est.\n\nDonec scelerisque, lectus tempor consectetur auctor, ante magna posuere lacus, in commodo eros enim non mauris. Praesent libero est, pulvinar vitae felis vel, fermentum mollis urna. Sed ut justo consectetur, posuere enim consectetur, dapibus ex. Etiam vitae diam tempor dui finibus convallis. Fusce dictum bibendum ante, sed auctor mauris feugiat vitae.",
+    bahasa: "Inggris",
   ),
   MenuBuku(
     image: Image.asset(
@@ -132,6 +135,7 @@ var bukuList = [
     rating: 4.5,
     sinopsis:
         "Sinopsis2.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus hendrerit purus. Aenean non dui ut mauris mollis maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed auctor lectus a vehicula malesuada. Vestibulum aliquam tincidunt urna eget efficitur. Cras a volutpat diam. Fusce pellentesque turpis odio, vel rhoncus sem blandit nec. Cras condimentum molestie eros, non gravida nulla facilisis et. Mauris vitae ante bibendum, gravida purus quis, cursus augue. Donec quis rutrum nisi, eget accumsan est.\n\nDonec scelerisque, lectus tempor consectetur auctor, ante magna posuere lacus, in commodo eros enim non mauris. Praesent libero est, pulvinar vitae felis vel, fermentum mollis urna. Sed ut justo consectetur, posuere enim consectetur, dapibus ex. Etiam vitae diam tempor dui finibus convallis. Fusce dictum bibendum ante, sed auctor mauris feugiat vitae.",
+    bahasa: "Indonesia",
   ),
   MenuBuku(
     image: Image.asset(
@@ -149,6 +153,7 @@ var bukuList = [
     rating: 4.3,
     sinopsis:
         "Sinopsis3.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus hendrerit purus. Aenean non dui ut mauris mollis maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed auctor lectus a vehicula malesuada. Vestibulum aliquam tincidunt urna eget efficitur. Cras a volutpat diam. Fusce pellentesque turpis odio, vel rhoncus sem blandit nec. Cras condimentum molestie eros, non gravida nulla facilisis et. Mauris vitae ante bibendum, gravida purus quis, cursus augue. Donec quis rutrum nisi, eget accumsan est.\n\nDonec scelerisque, lectus tempor consectetur auctor, ante magna posuere lacus, in commodo eros enim non mauris. Praesent libero est, pulvinar vitae felis vel, fermentum mollis urna. Sed ut justo consectetur, posuere enim consectetur, dapibus ex. Etiam vitae diam tempor dui finibus convallis. Fusce dictum bibendum ante, sed auctor mauris feugiat vitae.",
+    bahasa: "Inggris",
   ),
   MenuBuku(
     image: Image.asset(
@@ -166,6 +171,7 @@ var bukuList = [
     rating: 4.6,
     sinopsis:
         "Sinopsis4.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus hendrerit purus. Aenean non dui ut mauris mollis maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed auctor lectus a vehicula malesuada. Vestibulum aliquam tincidunt urna eget efficitur. Cras a volutpat diam. Fusce pellentesque turpis odio, vel rhoncus sem blandit nec. Cras condimentum molestie eros, non gravida nulla facilisis et. Mauris vitae ante bibendum, gravida purus quis, cursus augue. Donec quis rutrum nisi, eget accumsan est.\n\nDonec scelerisque, lectus tempor consectetur auctor, ante magna posuere lacus, in commodo eros enim non mauris. Praesent libero est, pulvinar vitae felis vel, fermentum mollis urna. Sed ut justo consectetur, posuere enim consectetur, dapibus ex. Etiam vitae diam tempor dui finibus convallis. Fusce dictum bibendum ante, sed auctor mauris feugiat vitae.",
+    bahasa: "Inggris",
   ),
   MenuBuku(
     image: Image.asset(
@@ -183,6 +189,7 @@ var bukuList = [
     rating: 4.5,
     sinopsis:
         "Sinopsis5.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus hendrerit purus. Aenean non dui ut mauris mollis maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed auctor lectus a vehicula malesuada. Vestibulum aliquam tincidunt urna eget efficitur. Cras a volutpat diam. Fusce pellentesque turpis odio, vel rhoncus sem blandit nec. Cras condimentum molestie eros, non gravida nulla facilisis et. Mauris vitae ante bibendum, gravida purus quis, cursus augue. Donec quis rutrum nisi, eget accumsan est.\n\nDonec scelerisque, lectus tempor consectetur auctor, ante magna posuere lacus, in commodo eros enim non mauris. Praesent libero est, pulvinar vitae felis vel, fermentum mollis urna. Sed ut justo consectetur, posuere enim consectetur, dapibus ex. Etiam vitae diam tempor dui finibus convallis. Fusce dictum bibendum ante, sed auctor mauris feugiat vitae.",
+    bahasa: "Inggris",
   ),
   MenuBuku(
     image: Image.asset(
@@ -200,5 +207,6 @@ var bukuList = [
     rating: 4.6,
     sinopsis:
         "Sinopsis6.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus hendrerit purus. Aenean non dui ut mauris mollis maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed auctor lectus a vehicula malesuada. Vestibulum aliquam tincidunt urna eget efficitur. Cras a volutpat diam. Fusce pellentesque turpis odio, vel rhoncus sem blandit nec. Cras condimentum molestie eros, non gravida nulla facilisis et. Mauris vitae ante bibendum, gravida purus quis, cursus augue. Donec quis rutrum nisi, eget accumsan est.\n\nDonec scelerisque, lectus tempor consectetur auctor, ante magna posuere lacus, in commodo eros enim non mauris. Praesent libero est, pulvinar vitae felis vel, fermentum mollis urna. Sed ut justo consectetur, posuere enim consectetur, dapibus ex. Etiam vitae diam tempor dui finibus convallis. Fusce dictum bibendum ante, sed auctor mauris feugiat vitae.",
+    bahasa: "Inggris",
   ),
 ];
