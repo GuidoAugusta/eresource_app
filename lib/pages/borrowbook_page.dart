@@ -1,14 +1,12 @@
+import 'package:eresource/models/homepage_model.dart';
 import 'package:eresource/pages/search_book.dart';
 import 'package:flutter/material.dart';
 
-class BorrowBook extends StatefulWidget {
-  const BorrowBook({super.key});
+class BorrowBook extends StatelessWidget {
+  final MenuBuku buku;
 
-  @override
-  State<BorrowBook> createState() => _BorrowBookState();
-}
+  const BorrowBook({Key? key, required this.buku}) : super(key: key);
 
-class _BorrowBookState extends State<BorrowBook> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +43,7 @@ class _BorrowBookState extends State<BorrowBook> {
                     padding: const EdgeInsets.only(
                         left: 0, right: 0, top: 10, bottom: 20),
                     child: Text(
-                      "I LOST A PLANET AND GAINED A HOME",
+                      buku.title,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
@@ -63,11 +61,13 @@ class _BorrowBookState extends State<BorrowBook> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.asset(
-                          "assets/book_cover1.png",
+                        Container(
                           width: 141,
                           height: 225,
-                          fit: BoxFit.cover,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(0),
+                            child: buku.image,
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 30, top: 10),
@@ -75,38 +75,81 @@ class _BorrowBookState extends State<BorrowBook> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Katie Johnson",
+                                buku.penulis,
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                     color: Color.fromRGBO(21, 80, 60, 1.0),
-                                    fontSize: 12,
+                                    fontSize: 16,
                                     fontFamily: 'Inter',
-                                    fontWeight: FontWeight.w400),
+                                    fontWeight: FontWeight.w500),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 25),
-                                child: Text(
-                                  "Tipe Buku : Hard Book",
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 13,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w400),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Tipe Buku : ",
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 14,
+                                          fontFamily: 'Inter',
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                    Text(
+                                      buku.tipe,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 14,
+                                          fontFamily: 'Inter',
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                  ],
                                 ),
                               ),
                               SizedBox(
                                 height: 5,
                               ),
+                              Row(
+                                children: [
+                                  Text(
+                                    "Kategori : ",
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                  Text(
+                                    buku.kategori,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
                               Text(
-                                "Kategori : Novel",
+                                "Bahasa : Inggris",
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 13,
+                                    fontSize: 14,
                                     fontFamily: 'Inter',
                                     fontWeight: FontWeight.w400),
                               ),
@@ -114,25 +157,12 @@ class _BorrowBookState extends State<BorrowBook> {
                                 height: 5,
                               ),
                               Text(
-                                "ISBN : 12345678910",
+                                "Tersedia : ${buku.tersedia}",
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 13,
-                                    fontFamily: 'Inter',
-                                    fontWeight: FontWeight.w400),
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                "Rak : Novel & Cerpen",
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 13,
+                                    fontSize: 14,
                                     fontFamily: 'Inter',
                                     fontWeight: FontWeight.w400),
                               ),
@@ -158,7 +188,7 @@ class _BorrowBookState extends State<BorrowBook> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Tersedia",
+                                      "Rating",
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
@@ -171,14 +201,14 @@ class _BorrowBookState extends State<BorrowBook> {
                                       height: 3,
                                     ),
                                     Text(
-                                      "2",
+                                      buku.rating.toString(),
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 12,
+                                          fontSize: 14,
                                           fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w400),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ],
                                 ),
@@ -216,14 +246,14 @@ class _BorrowBookState extends State<BorrowBook> {
                                       height: 3,
                                     ),
                                     Text(
-                                      "2023",
+                                      buku.tahunTerbit,
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 12,
+                                          fontSize: 14,
                                           fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w400),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ],
                                 ),
@@ -256,14 +286,14 @@ class _BorrowBookState extends State<BorrowBook> {
                                       height: 3,
                                     ),
                                     Text(
-                                      "169",
+                                      buku.jmlHalaman,
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 12,
+                                          fontSize: 14,
                                           fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w400),
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ],
                                 ),
@@ -279,15 +309,18 @@ class _BorrowBookState extends State<BorrowBook> {
                   ),
                   Text(
                     'Sinopsis',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus hendrerit purus. Aenean non dui ut mauris mollis maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed auctor lectus a vehicula malesuada. Vestibulum aliquam tincidunt urna eget efficitur. Cras a volutpat diam. Fusce pellentesque turpis odio, vel rhoncus sem blandit nec. Cras condimentum molestie eros, non gravida nulla facilisis et. Mauris vitae ante bibendum, gravida purus quis, cursus augue. Donec quis rutrum nisi, eget accumsan est. Aliquam nec accumsan sem. Donec pharetra, nunc a dictum auctor, erat enim cursus ex, a bibendum velit diam vel nunc. Quisque suscipit auctor eros, sed congue orci vestibulum et. Ut semper dapibus elit, a posuere augue congue in. Duis laoreet sed tellus non mattis.\n\nDonec scelerisque, lectus tempor consectetur auctor, ante magna posuere lacus, in commodo eros enim non mauris. Praesent libero est, pulvinar vitae felis vel, fermentum mollis urna. Sed ut justo consectetur, posuere enim consectetur, dapibus ex. Etiam vitae diam tempor dui finibus convallis. Fusce dictum bibendum ante, sed auctor mauris feugiat vitae.',
+                    buku.sinopsis,
                     style:
-                        TextStyle(fontWeight: FontWeight.normal, fontSize: 12),
+                        TextStyle(fontWeight: FontWeight.normal, fontSize: 14),
                     textAlign: TextAlign.justify,
                   ),
                 ],
